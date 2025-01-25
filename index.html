@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Gubbi Prakash's Personal Webpage</title>
+    <style>
+        /* Global Styles */
+        body {
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          background: #f9f9f9;
+          color: #333;
+          scroll-behavior: smooth;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: linear-gradient(90deg, #74ebd5, #9face6);
+          padding: 1rem 0;
+          z-index: 1000;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar ul {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .navbar ul li {
+          margin: 0 1rem;
+        }
+        .navbar ul li a {
+          text-decoration: none;
+          color: white;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          transition: background 0.3s;
+        }
+        .navbar ul li a:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section Styling */
+        .hero {
+          position: relative;
+          height: 100vh;
+          background: linear-gradient(135deg, #74ebd5, #9face6);
+          color: white;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .hero .profile-photo {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: 5px solid white;
+          margin-bottom: 1rem;
+          object-fit: cover;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .hero h1 {
+          margin: 0.5rem 0;
+          font-size: 2.8rem;
+          font-weight: bold;
+        }
+        .hero h2 {
+          margin: 0.5rem 0;
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+
+        /* Section Styling */
+        section {
+          margin: 6rem auto 2rem auto;
+          padding: 2rem;
+          background: white;
+          width: 90%;
+          max-width: 1200px;
+          border-radius: 15px;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+          text-align: center;
+          color: #333;
+          margin-bottom: 1.5rem;
+        }
+
+        /* Collapsible Header */
+        .collapsible-header {
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: #fff;
+          background: linear-gradient(90deg, #74ebd5, #9face6);
+          padding: 1rem;
+          border-radius: 10px;
+          margin-bottom: 1rem;
+          transition: background 0.3s;
+        }
+        .collapsible-header:hover {
+          background: linear-gradient(90deg, #74ebd5, #a1c4fd);
+        }
+
+        /* Collapsible Content */
+        .collapsible-content {
+          display: none;
+          margin: 1rem 0;
+          background: #f8f9fa;
+          padding: 1rem;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Subcategory Styling */
+        .subcategory {
+          margin: 1rem 0;
+        }
+        .subcategory h3 {
+          font-size: 1.3rem;
+          color: #007bff;
+          margin-bottom: 0.5rem;
+        }
+        .subcategory ul {
+          list-style: disc;
+          padding-left: 1.5rem;
+        }
+        .subcategory ul li {
+          margin: 0.5rem 0;
+          font-size: 1rem;
+          color: #333;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <ul>
+        <li><a href="#motivation">Course Motivation</a></li>
+        <li><a href="#media">Media Interactions</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+    </ul>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <img src="shreya-photo.jpeg" alt="Photo of Shreya" class="profile-photo">
+    <h1>Shreya Gubbi Prakash</h1>
+    <h2>Texas A&M University, College Station</h2>
+</div>
+
+<!-- Course Motivation Section -->
+<section id="motivation">
+    <h2>CSCE 656 Course Motivation</h2>
+    <p>
+        Howdy! I'm Shreya a Masters student in Computer Engineering at Texas A&M. I enrolled in the Computers and New Media course because I’m eager to explore how technology and creativity come together to shape the way we interact with the digital world. This class offers a unique opportunity to dive into the evolving role of media technologies and their impact on communication and engagement. I’m particularly excited to learn how these advancements can be applied to solve real-world challenges and create meaningful, transformative experiences. This course aligns perfectly with my goal of staying at the forefront of innovation in a rapidly changing digital landscape.
+    </p>
+</section>
+
+<!-- Media Interactions Section -->
+<section id="media">
+    <h2>My Media Interactions</h2>
+
+    <!-- TV Shows -->
+    <div>
+        <div class="collapsible-header" onclick="toggleContent('tv-shows')">TV Shows</div>
+        <div id="tv-shows" class="collapsible-content">
+            <div class="subcategory">
+                <h3>Drama</h3>
+                <ul>
+                    <li>Breaking Bad</li>
+                    <li>Gilmore Girls</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Crime</h3>
+                <ul>
+                    <li>Money Heist</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Thriller</h3>
+                <ul>
+                    <li>Squid Game</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Comedy</h3>
+                <ul>
+                    <li>Friends</li>
+                    <li>The Big Bang Theory</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movies -->
+    <div>
+        <div class="collapsible-header" onclick="toggleContent('movies')">Movies</div>
+        <div id="movies" class="collapsible-content">
+            <div class="subcategory">
+                <h3>Sci-Fi</h3>
+                <ul>
+                    <li>Interstellar</li>
+                    <li>Inception</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Romance</h3>
+                <ul>
+                    <li>Yeh Jawaani Hai Deewani</li>
+                    <li>13 Going on 30</li>
+                    <li>The Notebook</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Animated Movies</h3>
+                <ul>
+                    <li>Toy Story</li>
+                    <li>Frozen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music -->
+    <div>
+        <div class="collapsible-header" onclick="toggleContent('music')">Music</div>
+        <div id="music" class="collapsible-content">
+            <div class="subcategory">
+                <h3>Pop</h3>
+                <ul>
+                    <li>Blinding Lights - The Weeknd</li>
+                    <li>Señorita - Shawn Mendes & Camila Cabello</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Indie</h3>
+                <ul>
+                    <li>Dandelions - Ruth B.</li>
+                    <li>Die With A Smile - Ruth B.</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Country</h3>
+                <ul>
+                    <li>Love Story - Taylor Swift</li>
+                    <li>Beautiful Crazy - Luke Combs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games -->
+    <div>
+        <div class="collapsible-header" onclick="toggleContent('games')">Games</div>
+        <div id="games" class="collapsible-content">
+            <div class="subcategory">
+                <h3>Sandbox</h3>
+                <ul>
+                    <li>Minecraft</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>First-Person Shooter</h3>
+                <ul>
+                    <li>Valorant</li>
+                    <li>Apex Legends</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media and Messaging -->
+    <div>
+        <div class="collapsible-header" onclick="toggleContent('social-media')">Social Media and Messaging</div>
+        <div id="social-media" class="collapsible-content">
+            <div class="subcategory">
+                <h3>Social Media</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Microblogging</h3>
+                <ul>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>Messaging</h3>
+                <ul>
+                    <li>WhatsApp</li>
+                </ul>
+            </div>
+            <div class="subcategory">
+                <h3>General AI</h3>
+                <ul>
+                    <li>Chat GPT</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges Section -->
+<section id="challenges">
+    <h2>Challenges</h2>
+    <p>
+        One of the significant challenges I face in content generation and consumption is managing multiple platforms efficiently. Using tools like Instagram, YouTube, Slack, and email simultaneously can become overwhelming, leading to missed communications or redundant efforts. Additionally, creating high-quality visual content often requires advanced editing software or hardware, which can be expensive or difficult to learn. Finding time to master these tools amidst other responsibilities adds another layer of difficulty.
+    </p>
+</section>
+
+<script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+</body>
+</html>
